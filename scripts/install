@@ -1,0 +1,115 @@
+#!/bin/bash
+
+#=================================================
+# GENERIC START
+#=================================================
+# IMPORT GENERIC HELPERS
+#=================================================
+
+source _common.sh
+source /usr/share/yunohost/helpers
+source _ynh_fpm_config
+source _getopts
+
+#=================================================
+# MANAGE SCRIPT FAILURE
+#=================================================
+
+# Exit if an error occurs during the execution of the script
+ynh_abort_if_errors
+
+#=================================================
+# RETRIEVE ARGUMENTS FROM THE MANIFEST
+#=================================================
+
+domain=$YNH_APP_ARG_DOMAIN
+path_url=$YNH_APP_ARG_PATH
+phpversion=$YNH_APP_ARG_PHPVERSION
+
+app=$YNH_APP_INSTANCE_NAME
+
+#=================================================
+# CHECK IF THE APP CAN BE INSTALLED WITH THESE ARGS
+#=================================================
+ynh_print_info "Validating installation parameters..."
+
+final_path=/var/www/$app
+test ! -e "$final_path" || ynh_die "This path already contains a folder"
+
+# Normalize the url path syntax
+path_url=$(ynh_normalize_url_path $path_url)
+
+# Register (book) web path
+ynh_webpath_register $app $domain $path_url
+
+#=================================================
+# STORE SETTINGS FROM MANIFEST
+#=================================================
+ynh_print_info "Storing installation settings..."
+
+ynh_app_setting_set $app domain $domain
+ynh_app_setting_set $app path $path_url
+ynh_app_setting_set $app phpversion $phpversion
+
+#=================================================
+# STANDARD MODIFICATIONS
+#=================================================
+# DOWNLOAD, CHECK AND UNPACK SOURCE
+#=================================================
+ynh_print_info "Setting up source files..."
+
+ynh_app_setting_set $app final_path $final_path
+
+mkdir -p $final_path
+cp ../sources/index.php /$final_path/.
+
+#=================================================
+# CREATE DEDICATED USER
+#=================================================
+ynh_print_info "Configuring system user..."
+
+# Create a system user
+ynh_system_user_create $app
+
+#=================================================
+# SPECIFIC SETUP
+#=================================================
+# INSTALL AND CONFIGURE A SPECIFIC VERSION OF PHP
+#=================================================
+
+if [ "$phpversion" != "7.0" ]
+then
+	ynh_print_info "Installing php$phpversion..."
+	ynh_install_php --phpversion=$phpversion
+fi
+
+#=================================================
+# NGINX CONFIGURATION
+#=================================================
+ynh_print_info "Configuring nginx web server..."
+
+# Create a dedicated nginx config
+ynh_add_nginx_config "phpversion"
+
+#=================================================
+# PHP-FPM CONFIGURATION
+#=================================================
+ynh_print_info "Configuring php-fpm..."
+
+# Create a dedicated php-fpm config
+ynh_add_fpm_config --phpversion=$phpversion
+
+#=================================================
+# GENERIC FINALIZATION
+#=================================================
+# RELOAD NGINX
+#=================================================
+ynh_print_info "Reloading nginx web server..."
+
+systemctl reload nginx
+
+#=================================================
+# END OF SCRIPT
+#=================================================
+
+ynh_print_info "Installation of $app completed"

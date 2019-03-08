@@ -1,0 +1,98 @@
+#!/bin/bash
+
+#=================================================
+# GENERIC START
+#=================================================
+# IMPORT GENERIC HELPERS
+#=================================================
+
+source ../settings/scripts/_common.sh
+source /usr/share/yunohost/helpers
+source _getopts
+
+#=================================================
+# MANAGE SCRIPT FAILURE
+#=================================================
+
+# Exit if an error occurs during the execution of the script
+ynh_abort_if_errors
+
+#=================================================
+# LOAD SETTINGS
+#=================================================
+ynh_print_info "Loading settings..."
+
+app=$YNH_APP_INSTANCE_NAME
+
+domain=$(ynh_app_setting_get $app domain)
+path_url=$(ynh_app_setting_get $app path)
+final_path=$(ynh_app_setting_get $app final_path)
+phpversion=$(ynh_app_setting_get $app php_version)
+phpversion=${phpversion:-7.0}
+
+#=================================================
+# CHECK IF THE APP CAN BE RESTORED
+#=================================================
+ynh_print_info "Validating restoration parameters..."
+
+ynh_webpath_available $domain $path_url \
+	|| ynh_die "Path not available: ${domain}${path_url}"
+test ! -d $final_path \
+	|| ynh_die "There is already a directory: $final_path "
+
+#=================================================
+# STANDARD RESTORATION STEPS
+#=================================================
+# RESTORE THE NGINX CONFIGURATION
+#=================================================
+
+ynh_restore_file "/etc/nginx/conf.d/$domain.d/$app.conf"
+
+#=================================================
+# RESTORE THE APP MAIN DIR
+#=================================================
+ynh_print_info "Restoring the app main directory..."
+
+ynh_restore_file "$final_path"
+
+#=================================================
+# RECREATE THE DEDICATED USER
+#=================================================
+ynh_print_info "Recreating the dedicated system user..."
+
+# Create the dedicated user (if not existing)
+ynh_system_user_create $app
+
+#=================================================
+# SPECIFIC RESTORATION
+#=================================================
+# INSTALL AND CONFIGURE A SPECIFIC VERSION OF PHP
+#=================================================
+
+if [ "$phpversion" != "7.0" ]
+then
+	ynh_print_info "Installing php$phpversion..."
+	ynh_install_php --phpversion=$phpversion
+fi
+
+#=================================================
+# RESTORE THE PHP-FPM CONFIGURATION
+#=================================================
+
+ynh_restore_file "/etc/php/$phpversion/fpm/pool.d/$app.conf"
+
+#=================================================
+# GENERIC FINALIZATION
+#=================================================
+# RELOAD NGINX AND PHP-FPM
+#=================================================
+ynh_print_info "Reloading nginx web server and php-fpm..."
+
+systemctl reload php${phpversion}-fpm
+systemctl reload nginx
+
+#=================================================
+# END OF SCRIPT
+#=================================================
+
+ynh_print_info "Restoration completed for $app"
