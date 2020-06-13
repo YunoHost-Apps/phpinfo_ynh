@@ -5,14 +5,14 @@
     "description": {
         "en": "A simple phpinfo for YunoHost."
     },
-    "version": "1.0~ynh1",
+    "version": "1.0~ynh2",
     "license": "GPL-3",
     "maintainer": {
 		"name": "Maniack Crudelis",
 		"email": "maniackc_dev@crudelis.fr"
     },
     "requirements": {
-        "yunohost": ">= 3.4"
+        "yunohost": ">= 3.8.1"
     },
     "multi_instance": true,
     "services": [
