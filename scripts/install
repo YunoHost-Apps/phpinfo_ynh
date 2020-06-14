@@ -23,7 +23,7 @@ ynh_abort_if_errors
 domain=$YNH_APP_ARG_DOMAIN
 path_url=$YNH_APP_ARG_PATH
 phpversion=$YNH_APP_ARG_PHPVERSION
-YNH_PHP_VERSION=phpversion
+YNH_PHP_VERSION=$phpversion
 
 app=$YNH_APP_INSTANCE_NAME
 
@@ -83,6 +83,7 @@ ynh_script_progression --message="Configuring php-fpm..."
 # Create a dedicated php-fpm config
 ynh_add_fpm_config
 
+#=================================================
 # GENERIC FINALIZATION
 #=================================================
 # RELOAD NGINX
