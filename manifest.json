@@ -6,7 +6,7 @@
         "en": "A simple phpinfo for YunoHost."
     },
     "version": "1.0~ynh2",
-    "license": "GPL-3",
+    "license": "GPL-3.0-or-later",
     "maintainer": {
 		"name": "Maniack Crudelis",
 		"email": "maniackc_dev@crudelis.fr"
