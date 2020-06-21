@@ -67,11 +67,11 @@ ynh_system_user_create --username=$app
 #=================================================
 ynh_script_progression --message="Restoring PHP-FPM configuration..."
 
-# Restore the file first, so it can have a backup if different
-ynh_restore_file --origin_path="/etc/php/$phpversion/fpm/pool.d/$app.conf"
-
 # Recreate a dedicated php-fpm config
 ynh_add_fpm_config --phpversion=$phpversion
+
+# Restore the file first, so it can have a backup if different
+ynh_restore_file --origin_path="/etc/php/$phpversion/fpm/pool.d/$app.conf"
 
 #=================================================
 # GENERIC FINALIZATION
