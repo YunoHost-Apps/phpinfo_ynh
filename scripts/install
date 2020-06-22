@@ -54,7 +54,7 @@ ynh_app_setting_set --app=$app --key=phpversion --value=$phpversion
 #=================================================
 ynh_script_progression --message="Setting up source files..."
 
-ynh_app_setting_set $app final_path $final_path
+ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 
 mkdir -p $final_path
 cp ../sources/index.php /$final_path/.
