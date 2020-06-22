@@ -69,7 +69,7 @@ ynh_system_user_create --username=$app
 ynh_script_progression --message="Restoring PHP-FPM configuration..."
 
 # Recreate a dedicated php-fpm config
-ynh_add_fpm_config --phpversion=$phpversion
+ynh_add_fpm_config
 
 #=================================================
 # GENERIC FINALIZATION
