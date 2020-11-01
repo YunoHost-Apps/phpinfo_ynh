@@ -12,7 +12,7 @@
 		"email": "maniackc_dev@crudelis.fr"
     },
     "requirements": {
-        "yunohost": ">= 3.4"
+        "yunohost": ">= 3.5"
     },
     "multi_instance": true,
     "services": [
@@ -46,7 +46,7 @@
                     "en": "Choose the version of PHP to use."
                 },
                 "choices": ["7.0", "7.1", "7.2", "7.3"],
-                "default": "7.0"
+                "default": "7.3"
             }
         ]
     }
