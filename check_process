@@ -1,4 +1,4 @@
-;; Test complet avec php 7.1
+;; Test complet avec php 7.3
 	; Manifest
 		domain="domain.tld"	(DOMAIN)
 		path="/path"	(PATH)
@@ -41,6 +41,7 @@
 		setup_sub_dir=1
 		backup_restore=1
 ;;; Levels
+	# If the level 5 (Package linter) is forced to 1. Please add justifications here.
 	Level 5=auto
 ;;; Options
 Email=
