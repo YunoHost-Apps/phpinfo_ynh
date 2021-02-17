@@ -1,9 +1,7 @@
 # PHPinfo for YunoHost
 
 [![Integration level](https://dash.yunohost.org/integration/phpinfo.svg)](https://dash.yunohost.org/appci/app/phpinfo) ![](https://ci-apps.yunohost.org/ci/badges/phpinfo.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/phpinfo.maintain.svg)  
-[![Install PHPinfo with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=phpinfo)
-
-*[Lire ce readme en français.](./README_fr.md)*
+[![Install PHPinfo with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=phpinfo)
 
 > *This package allows you to install PHPinfo quickly and simply on a YunoHost server.  
 If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/install) to learn how to install it.*
