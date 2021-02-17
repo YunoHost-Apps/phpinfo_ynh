@@ -3,7 +3,7 @@
     "id": "phpinfo",
     "packaging_format": 1,
     "description": {
-        "en": "A simple phpinfo for YunoHost."
+        "en": "A simple phpinfo."
     },
     "version": "1.0~ynh1",
     "url": "https://www.php.net/manual/fr/function.phpinfo.php",
