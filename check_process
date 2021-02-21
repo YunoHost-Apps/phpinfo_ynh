@@ -1,8 +1,8 @@
-;; Test complet avec php 7.1
+;; Test complet avec php 7.3
 	; Manifest
 		domain="domain.tld"	(DOMAIN)
 		path="/path"	(PATH)
-		phpversion="7.1"
+		phpversion="7.3"
 	; Checks
 		pkg_linter=1
 		setup_sub_dir=1
@@ -24,11 +24,11 @@
 	; Checks
 		setup_sub_dir=1
 		backup_restore=1
-;; Test avec php 7.3
+;; Test avec php 7.1
 	; Manifest
 		domain="domain.tld"	(DOMAIN)
 		path="/path"	(PATH)
-		phpversion="7.3"
+		phpversion="7.1"
 	; Checks
 		setup_sub_dir=1
 		backup_restore=1
@@ -41,6 +41,7 @@
 		setup_sub_dir=1
 		backup_restore=1
 ;;; Levels
+	# If the level 5 (Package linter) is forced to 1. Please add justifications here.
 	Level 5=auto
 ;;; Options
 Email=
