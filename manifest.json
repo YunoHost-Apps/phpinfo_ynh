@@ -47,8 +47,7 @@
                 "ask": {
                     "en": "Choose the version of PHP to use."
                 },
-                "choices": ["7.0", "7.1", "7.2", "7.3"],
-                "default": "7.3"
+                "default": "8.0.3"
             }
         ]
     }
