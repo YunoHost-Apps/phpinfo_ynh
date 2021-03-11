@@ -196,16 +196,16 @@ ynh_install_php () {
     ynh_app_setting_set --app=$YNH_APP_INSTANCE_NAME --key=php_version --value=$final_php_version
 
     # Remove app virtualenv
-    if  `phpenv alias --list | grep --quiet "$YNH_APP_INSTANCE_NAME" 1>/dev/null 2>&1`
+    if  `phpenv alias --list | grep --quiet "$YNH_APP_INSTANCE_NAME " 1>/dev/null 2>&1`
     then
         phpenv alias $YNH_APP_INSTANCE_NAME --remove
     fi
 
+    # Create app virtualenv
+    phpenv alias $YNH_APP_INSTANCE_NAME $final_php_version
+
     # Cleanup PHP versions
     ynh_cleanup_php
-
-    # Create app virtualenv
-    # phpenv alias $YNH_APP_INSTANCE_NAME $final_php_version
 
     # Install php-fpm service
     cp -f "$php_version_path/$final_php_version/etc/systemd/system/php-fpm.service" "/etc/systemd/system/php$final_php_version-fpm.service"
@@ -237,6 +237,8 @@ ynh_remove_php () {
 
     # Remove /usr/local/bin in PATH in case of PHP prior installation
     PATH=$(echo $CLEAR_PATH | sed 's@/usr/local/bin:@@')
+
+    phpenv alias $YNH_APP_INSTANCE_NAME --remove
 
     # Remove the line for this app
     ynh_app_setting_delete --app=$YNH_APP_INSTANCE_NAME --key=php_version
@@ -293,11 +295,15 @@ ynh_cleanup_php () {
 
 
 ynh_add_fpm_config () {
+    php_version=$(ynh_app_setting_get --app=$app --key=php_version)
     ynh_use_php
     ynh_add_config --template="../conf/php-fpm.conf" --destination="$ynh_fpm_conf"
+    systemctl reload-or-restart php$php_version-fpm
 }
 
 ynh_remove_fpm_config () {
+    php_version=$(ynh_app_setting_get --app=$app --key=php_version)
     ynh_use_php
     ynh_secure_remove --file="$ynh_fpm_conf"
+    systemctl reload-or-restart php$php_version-fpm
 }
