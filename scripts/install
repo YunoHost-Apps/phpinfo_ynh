@@ -64,7 +64,7 @@ ynh_script_progression --message="Setting up source files..."
 ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 
 mkdir -p $final_path
-cp ../sources/index.php /$final_path/.
+cp ../sources/index.php $final_path/.
 
 #=================================================
 # NGINX CONFIGURATION
