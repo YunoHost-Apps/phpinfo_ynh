@@ -2,7 +2,7 @@
 	; Manifest
 		domain="domain.tld"	(DOMAIN)
 		path="/path"	(PATH)
-		phpversion="7.3"
+		php_version="7.3"
 	; Checks
 		pkg_linter=1
 		setup_sub_dir=1
@@ -20,7 +20,7 @@
 	; Manifest
 		domain="domain.tld"	(DOMAIN)
 		path="/path"	(PATH)
-		phpversion="7.2"
+		php_version="7.2"
 	; Checks
 		setup_sub_dir=1
 		backup_restore=1
@@ -28,7 +28,7 @@
 	; Manifest
 		domain="domain.tld"	(DOMAIN)
 		path="/path"	(PATH)
-		phpversion="7.1"
+		php_version="7.1"
 	; Checks
 		setup_sub_dir=1
 		backup_restore=1
@@ -36,7 +36,7 @@
 	; Manifest
 		domain="domain.tld"	(DOMAIN)
 		path="/path"	(PATH)
-		phpversion="7.0"
+		php_version="7.0"
 	; Checks
 		setup_sub_dir=1
 		backup_restore=1

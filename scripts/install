@@ -23,7 +23,7 @@ ynh_abort_if_errors
 
 domain=$YNH_APP_ARG_DOMAIN
 path_url=$YNH_APP_ARG_PATH
-php_version=$YNH_APP_ARG_PHPVERSION
+php_version=$YNH_APP_ARG_PHP_VERSION
 
 app=$YNH_APP_INSTANCE_NAME
 
@@ -73,7 +73,7 @@ cp ../sources/index.php $final_path/.
 ynh_script_progression --message="Configuring NGINX web server..."
 
 # Create a dedicated NGINX config
-ynh_add_nginx_config
+ynh_add_nginx_config "php_version"
 
 #=================================================
 # CREATE DEDICATED USER

@@ -42,7 +42,7 @@
                 "default": "/phpinfo"
             },
             {
-                "name": "phpversion",
+                "name": "php_version",
                 "type": "string",
                 "ask": {
                     "en": "Choose the version of PHP to use."
