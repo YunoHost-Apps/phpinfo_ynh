@@ -32,11 +32,19 @@
 	; Checks
 		setup_sub_dir=1
 		backup_restore=1
-;; Test avec php 7.0
+;; Test avec php 7.4
 	; Manifest
 		domain="domain.tld"	(DOMAIN)
 		path="/path"	(PATH)
-		php_version="7.0"
+		php_version="7.4"
+	; Checks
+		setup_sub_dir=1
+		backup_restore=1
+;; Test avec php 8.0
+	; Manifest
+		domain="domain.tld"	(DOMAIN)
+		path="/path"	(PATH)
+		php_version="8.0"
 	; Checks
 		setup_sub_dir=1
 		backup_restore=1
