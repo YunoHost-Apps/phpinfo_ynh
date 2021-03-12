@@ -225,11 +225,6 @@ ynh_install_php () {
     ynh_replace_string --match_string="user = nobody" --replace_string="user = www-data" --target_file="$php_version_path/$final_php_version/etc/php-fpm.d/www.conf"
     ynh_replace_string --match_string="group = nobody" --replace_string="group = www-data" --target_file="$php_version_path/$final_php_version/etc/php-fpm.d/www.conf"
     ynh_replace_string --match_string="listen = 127.0.0.1:9000" --replace_string="listen = /run/php/php$final_php_version-fpm.sock" --target_file="$php_version_path/$final_php_version/etc/php-fpm.d/www.conf"
-    ynh_replace_string --match_string="match_string" --replace_string="replace_string" --target_file="$php_version_path/$final_php_version/etc/php-fpm.d/www.conf"
-    ynh_replace_string --match_string="match_string" --replace_string="replace_string" --target_file="$php_version_path/$final_php_version/etc/php-fpm.d/www.conf"
-    ynh_replace_string --match_string="match_string" --replace_string="replace_string" --target_file="$php_version_path/$final_php_version/etc/php-fpm.d/www.conf"
-    ynh_replace_string --match_string="match_string" --replace_string="replace_string" --target_file="$php_version_path/$final_php_version/etc/php-fpm.d/www.conf"
-    ynh_replace_string --match_string="match_string" --replace_string="replace_string" --target_file="$php_version_path/$final_php_version/etc/php-fpm.d/www.conf"
 
     # Store php_version into the config of this app
     ynh_app_setting_set --app=$YNH_APP_INSTANCE_NAME --key=php_version --value=$final_php_version
@@ -248,6 +243,7 @@ ynh_install_php () {
 
     # Install php-fpm service
     cp -f "$php_version_path/$final_php_version/etc/systemd/system/php-fpm.service" "/etc/systemd/system/php$final_php_version-fpm.service"
+    ynh_replace_string --match_string="PIDFile=$php_version_path/$final_php_version/var/run/php-fpm.pid" --replace_string="PIDFile=/var/run/php/php$final_php_version-fpm.pid" --target_file="/etc/systemd/system/php$final_php_version-fpm.service"
     systemctl enable php$final_php_version-fpm --quiet
     systemctl daemon-reload
     systemctl start php$final_php_version-fpm
