@@ -79,7 +79,7 @@ ynh_use_php () {
 
     # Sets the local application-specific PHP version
     pushd $final_path
-        $php_version_path/$php_version/bin/phpenv local $php_version
+        $phpenv_install_dir/bin/phpenv local $php_version
     popd
 }
 
