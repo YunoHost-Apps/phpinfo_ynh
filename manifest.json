@@ -40,7 +40,7 @@
                     "en": "Choose the version of PHP to use.",
                     "fr": "Choisissez la version de PHP à utiliser."
                 },
-                "choices": ["7.3",, "7.4", "8.0"],
+                "choices": ["7.3", "7.4", "8.0"],
                 "default": "7.3"
             }
         ]
