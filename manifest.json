@@ -3,9 +3,10 @@
     "id": "phpinfo",
     "packaging_format": 1,
     "description": {
-        "en": "A simple phpinfo."
+        "en": "Simple phpinfo",
+        "fr": "Simple phpinfo"
     },
-    "version": "1.0~ynh1",
+    "version": "1.0~ynh2",
     "url": "https://www.php.net/manual/fr/function.phpinfo.php",
     "license": "GPL-3.0-or-later",
     "maintainer": {
@@ -13,31 +14,22 @@
 		"email": "maniackc_dev@crudelis.fr"
     },
     "requirements": {
-        "yunohost": ">= 4.1.3"
+        "yunohost": ">= 4.2.8"
     },
     "multi_instance": true,
     "services": [
         "nginx",
-        "php7.0-fpm"
+        "php7.3-fpm"
     ],
     "arguments": {
         "install" : [
             {
                 "name": "domain",
-                "type": "domain",
-                "ask": {
-                    "en": "Choose a domain name for ynhexample",
-                    "fr": "Choisissez un nom de domaine pour ynhexample"
-                },
-                "example": "example.com"
+                "type": "domain"
             },
             {
                 "name": "path",
                 "type": "path",
-                "ask": {
-                    "en": "Choose a path for ynhexample",
-                    "fr": "Choisissez un chemin pour ynhexample"
-                },
                 "example": "/phpinfo",
                 "default": "/phpinfo"
             },
@@ -45,9 +37,10 @@
                 "name": "phpversion",
                 "type": "string",
                 "ask": {
-                    "en": "Choose the version of PHP to use."
+                    "en": "Choose the version of PHP to use.",
+                    "fr": "Choisissez la version de PHP à utiliser."
                 },
-                "choices": ["7.0", "7.1", "7.2", "7.3"],
+                "choices": ["7.3",, "7.4", "8.0"],
                 "default": "7.3"
             }
         ]
