@@ -22,7 +22,7 @@ ynh_abort_if_errors
 
 domain=$YNH_APP_ARG_DOMAIN
 path_url=$YNH_APP_ARG_PATH
-YNH_PHP_VERSION=$YNH_APP_ARG_PHPVERSION
+phpversion=$YNH_APP_ARG_PHPVERSION
 
 app=$YNH_APP_INSTANCE_NAME
 
@@ -44,6 +44,7 @@ ynh_script_progression --message="Storing installation settings..."
 
 ynh_app_setting_set --app=$app --key=domain --value=$domain
 ynh_app_setting_set --app=$app --key=path --value=$path_url
+ynh_app_setting_set --app=$app --key=phpversion --value=$phpversion
 
 #=================================================
 # CREATE DEDICATED USER
@@ -84,7 +85,6 @@ ynh_script_progression --message="Configuring PHP-FPM..."
 
 # Create a dedicated php-fpm config
 ynh_add_fpm_config --usage=low --footprint=low
-phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
 
 #=================================================
 # RELOAD NGINX
