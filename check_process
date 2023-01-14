@@ -2,7 +2,7 @@
 	; Manifest
 		domain="domain.tld"
 		path="/path"
-		phpversion="7.3"
+		phpversion="7.4"
 	; Checks
 		pkg_linter=1
 		setup_sub_dir=1
