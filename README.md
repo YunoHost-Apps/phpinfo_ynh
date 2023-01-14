@@ -17,7 +17,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 Simple phpinfo
 
-**Shipped version:** 1.0~ynh3
+**Shipped version:** 1.0~ynh4
 ## Documentation and resources
 
 * Official app website: <https://www.php.net/manual/fr/function.phpinfo.php>

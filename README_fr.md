@@ -17,7 +17,7 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 Simple phpinfo
 
-**Version incluse :** 1.0~ynh3
+**Version incluse :** 1.0~ynh4
 ## Documentations et ressources
 
 * Site officiel de l'app : <https://www.php.net/manual/fr/function.phpinfo.php>
