@@ -5,22 +5,23 @@ It shall NOT be edited by hand.
 
 # Phpinfo pour YunoHost
 
-[![Niveau d'intégration](https://dash.yunohost.org/integration/phpinfo.svg)](https://dash.yunohost.org/appci/app/phpinfo) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/phpinfo.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/phpinfo.maintain.svg)  
+[![Niveau d’intégration](https://dash.yunohost.org/integration/phpinfo.svg)](https://dash.yunohost.org/appci/app/phpinfo) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/phpinfo.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/phpinfo.maintain.svg)
+
 [![Installer Phpinfo avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=phpinfo)
 
 *[Read this readme in english.](./README.md)*
 
-> *Ce package vous permet d'installer Phpinfo rapidement et simplement sur un serveur YunoHost.
-Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
+> *Ce package vous permet d’installer Phpinfo rapidement et simplement sur un serveur YunoHost.
+Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l’installer et en profiter.*
 
-## Vue d'ensemble
+## Vue d’ensemble
 
 Simple phpinfo
 
 **Version incluse :** 1.0~ynh4
 ## Documentations et ressources
 
-* Site officiel de l'app : <https://www.php.net/manual/fr/function.phpinfo.php>
+* Site officiel de l’app : <https://www.php.net/manual/fr/function.phpinfo.php>
 * Documentation YunoHost pour cette app : <https://yunohost.org/app_phpinfo>
 * Signaler un bug : <https://github.com/YunoHost-Apps/phpinfo_ynh/issues>
 
@@ -36,4 +37,4 @@ ou
 sudo yunohost app upgrade phpinfo -u https://github.com/YunoHost-Apps/phpinfo_ynh/tree/testing --debug
 ```
 
-**Plus d'infos sur le packaging d'applications :** <https://yunohost.org/packaging_apps>
+**Plus d’infos sur le packaging d’applications :** <https://yunohost.org/packaging_apps>
