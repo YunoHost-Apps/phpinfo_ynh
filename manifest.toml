@@ -14,7 +14,7 @@ license = "GPL-3.0-or-later"
 website = "https://www.php.net/manual/fr/function.phpinfo.php"
 
 [integration]
-yunohost = ">= 11.1.16"
+yunohost = ">= 11.1.21"
 architectures = "all"
 multi_instance = true
 ldap = false
