@@ -47,4 +47,14 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.apt]
-    packages = "php8.0-fpm"
+    packages_from_raw_bash = """
+            if [[ "$php_version" == "7.4" ]]; then 
+                echo "php7.4-fpm"
+            elif [[ "$php_version" == "8.0" ]]; then
+                echo "php8.0-fpm"
+            elif [[ "$php_version" == "8.1" ]]; then
+                echo "php8.1-fpm"
+            elif [[ "$php_version" == "8.2" ]]; then
+                echo "php8.2-fpm"
+            fi
+        """
