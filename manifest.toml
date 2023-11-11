@@ -7,18 +7,21 @@ description.fr = "Simple phpinfo"
 
 version = "1.0~ynh4"
 
-maintainers = ["Maniack Crudelis"]
+maintainers = [""]
 
 [upstream]
 license = "GPL-3.0-or-later"
 website = "https://www.php.net/manual/fr/function.phpinfo.php"
 
 [integration]
-yunohost = ">= 11.1.21"
+yunohost = ">= 11.2"
 architectures = "all"
 multi_instance = true
+
 ldap = false
+
 sso = false
+
 disk = "50M"
 ram.build = "50M"
 ram.runtime = "50M"
