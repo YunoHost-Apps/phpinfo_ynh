@@ -22,7 +22,7 @@ Simple phpinfo
 ## Documentation and resources
 
 * Official app website: <https://www.php.net/manual/fr/function.phpinfo.php>
-* YunoHost documentation for this app: <https://yunohost.org/app_phpinfo>
+* YunoHost Store: <https://apps.yunohost.org/app/phpinfo>
 * Report a bug: <https://github.com/YunoHost-Apps/phpinfo_ynh/issues>
 
 ## Developer info
