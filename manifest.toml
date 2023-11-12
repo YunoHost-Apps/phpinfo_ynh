@@ -34,6 +34,10 @@ ram.runtime = "50M"
     type = "path"
     default = "/phpinfo"
 
+    [install.init_main_permission]
+    type = "group"
+    default = "visitors"
+
     [install.phpversion]
     ask.en = "Choose the version of PHP to use."
     ask.fr = "Choisissez la version de PHP à utiliser."
