@@ -12,10 +12,11 @@ test_format = 1.0
     # Default args to use for install
     # -------------------------------
 
-    [80_test]
+    args.phpversion = "7.4"
 
-    only = ["install.subdir", "backup_restore", "upgrade" ]
-    args.phpversion = "8.0"
+    # -------------------------------
+    # Commits to test upgrade from
+    # -------------------------------
 
     [82_test]
 
