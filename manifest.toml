@@ -5,7 +5,7 @@ name = "Phpinfo"
 description.en = "Simple phpinfo"
 description.fr = "Simple phpinfo"
 
-version = "1.0~ynh4"
+version = "1.0~ynh5"
 
 maintainers = [""]
 
