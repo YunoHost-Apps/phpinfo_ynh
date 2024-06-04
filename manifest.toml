@@ -7,7 +7,7 @@ description.fr = "Simple phpinfo"
 
 version = "1.0~ynh5"
 
-maintainers = [""]
+maintainers = []
 
 [upstream]
 license = "GPL-3.0-or-later"
