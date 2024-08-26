@@ -42,7 +42,7 @@ ram.runtime = "50M"
     ask.en = "Choose the version of PHP to use."
     ask.fr = "Choisissez la version de PHP à utiliser."
     type = "select"
-    choices = ["7.4", "8.0", "8.1", "8.2"]
+    choices = ["7.4", "8.0", "8.1", "8.2", "8.3"]
     default = "8.2"
 
 [resources]
@@ -54,15 +54,7 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.apt]
-    packages = ""
+    packages = "nginx" # Kind of "dummy" value to be sure to have a non-empty dep list
     packages_from_raw_bash = """
-            if [[ "$php_version" == "7.4" ]]; then 
-                echo "php7.4-fpm"
-            elif [[ "$php_version" == "8.0" ]]; then
-                echo "php8.0-fpm"
-            elif [[ "$php_version" == "8.1" ]]; then
-                echo "php8.1-fpm"
-            elif [[ "$php_version" == "8.2" ]]; then
-                echo "php8.2-fpm"
-            fi
-        """
+        echo "php${phpversion}-fpm"
+    """
