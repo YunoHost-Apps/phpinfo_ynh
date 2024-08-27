@@ -5,7 +5,7 @@ It shall NOT be edited by hand.
 
 # Phpinfo for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/phpinfo.svg)](https://dash.yunohost.org/appci/app/phpinfo) ![Working status](https://ci-apps.yunohost.org/ci/badges/phpinfo.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/phpinfo.maintain.svg)
+[![Integration level](https://dash.yunohost.org/integration/phpinfo.svg)](https://ci-apps.yunohost.org/ci/apps/phpinfo/) ![Working status](https://ci-apps.yunohost.org/ci/badges/phpinfo.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/phpinfo.maintain.svg)
 
 [![Install Phpinfo with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=phpinfo)
 
@@ -18,7 +18,7 @@ It shall NOT be edited by hand.
 
 Simple phpinfo
 
-**Shipped version:** 1.0~ynh5
+**Shipped version:** 1.0~ynh6
 ## Documentation and resources
 
 - Official app website: <https://www.php.net/manual/fr/function.phpinfo.php>

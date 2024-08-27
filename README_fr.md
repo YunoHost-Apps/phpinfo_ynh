@@ -5,7 +5,7 @@ Il NE doit PAS être modifié à la main.
 
 # Phpinfo pour YunoHost
 
-[![Niveau d’intégration](https://dash.yunohost.org/integration/phpinfo.svg)](https://dash.yunohost.org/appci/app/phpinfo) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/phpinfo.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/phpinfo.maintain.svg)
+[![Niveau d’intégration](https://dash.yunohost.org/integration/phpinfo.svg)](https://ci-apps.yunohost.org/ci/apps/phpinfo/) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/phpinfo.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/phpinfo.maintain.svg)
 
 [![Installer Phpinfo avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=phpinfo)
 
@@ -18,7 +18,7 @@ Il NE doit PAS être modifié à la main.
 
 Simple phpinfo
 
-**Version incluse :** 1.0~ynh5
+**Version incluse :** 1.0~ynh6
 ## Documentations et ressources
 
 - Site officiel de l’app : <https://www.php.net/manual/fr/function.phpinfo.php>
