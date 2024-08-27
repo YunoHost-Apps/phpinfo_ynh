@@ -5,7 +5,7 @@ EZ editatu eskuz.
 
 # Phpinfo YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/phpinfo.svg)](https://dash.yunohost.org/appci/app/phpinfo) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/phpinfo.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/phpinfo.maintain.svg)
+[![Integrazio maila](https://dash.yunohost.org/integration/phpinfo.svg)](https://ci-apps.yunohost.org/ci/apps/phpinfo/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/phpinfo.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/phpinfo.maintain.svg)
 
 [![Instalatu Phpinfo YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=phpinfo)
 

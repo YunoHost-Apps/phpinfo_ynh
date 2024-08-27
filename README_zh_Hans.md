@@ -5,7 +5,7 @@
 
 # YunoHost 上的 Phpinfo
 
-[![集成程度](https://dash.yunohost.org/integration/phpinfo.svg)](https://dash.yunohost.org/appci/app/phpinfo) ![工作状态](https://ci-apps.yunohost.org/ci/badges/phpinfo.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/phpinfo.maintain.svg)
+[![集成程度](https://dash.yunohost.org/integration/phpinfo.svg)](https://ci-apps.yunohost.org/ci/apps/phpinfo/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/phpinfo.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/phpinfo.maintain.svg)
 
 [![使用 YunoHost 安装 Phpinfo](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=phpinfo)
 
