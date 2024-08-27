@@ -18,7 +18,7 @@ EZ editatu eskuz.
 
 Simple phpinfo
 
-**Paketatutako bertsioa:** 1.0~ynh5
+**Paketatutako bertsioa:** 1.0~ynh6
 ## Dokumentazioa eta baliabideak
 
 - Aplikazioaren webgune ofiziala: <https://www.php.net/manual/fr/function.phpinfo.php>

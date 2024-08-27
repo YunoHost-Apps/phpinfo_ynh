@@ -18,7 +18,7 @@
 
 Simple phpinfo
 
-**分发版本：** 1.0~ynh5
+**分发版本：** 1.0~ynh6
 ## 文档与资源
 
 - 官方应用网站： <https://www.php.net/manual/fr/function.phpinfo.php>

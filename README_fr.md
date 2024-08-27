@@ -18,7 +18,7 @@ Il NE doit PAS être modifié à la main.
 
 Simple phpinfo
 
-**Version incluse :** 1.0~ynh5
+**Version incluse :** 1.0~ynh6
 ## Documentations et ressources
 
 - Site officiel de l’app : <https://www.php.net/manual/fr/function.phpinfo.php>

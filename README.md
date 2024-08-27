@@ -18,7 +18,7 @@ It shall NOT be edited by hand.
 
 Simple phpinfo
 
-**Shipped version:** 1.0~ynh5
+**Shipped version:** 1.0~ynh6
 ## Documentation and resources
 
 - Official app website: <https://www.php.net/manual/fr/function.phpinfo.php>

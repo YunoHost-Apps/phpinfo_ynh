@@ -18,7 +18,7 @@ NON debe editarse manualmente.
 
 Simple phpinfo
 
-**Versión proporcionada:** 1.0~ynh5
+**Versión proporcionada:** 1.0~ynh6
 ## Documentación e recursos
 
 - Web oficial da app: <https://www.php.net/manual/fr/function.phpinfo.php>

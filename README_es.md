@@ -18,7 +18,7 @@ No se debe editar a mano.
 
 Simple phpinfo
 
-**Versión actual:** 1.0~ynh5
+**Versión actual:** 1.0~ynh6
 ## Documentaciones y recursos
 
 - Sitio web oficial: <https://www.php.net/manual/fr/function.phpinfo.php>

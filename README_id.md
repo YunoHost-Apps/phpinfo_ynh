@@ -18,7 +18,7 @@ Ini TIDAK boleh diedit dengan tangan.
 
 Simple phpinfo
 
-**Versi terkirim:** 1.0~ynh5
+**Versi terkirim:** 1.0~ynh6
 ## Dokumentasi dan sumber daya
 
 - Website aplikasi resmi: <https://www.php.net/manual/fr/function.phpinfo.php>
