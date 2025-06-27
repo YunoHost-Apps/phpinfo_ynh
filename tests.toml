@@ -18,23 +18,7 @@ test_format = 1.0
     # Commits to test upgrade from
     # -------------------------------
 
-[74_test]
+[84_test]
 
     only = ["install.subdir", "backup_restore", "upgrade" ]
-    args.phpversion = "7.4"
-
-[80_test]
-
-    only = ["install.subdir", "backup_restore", "upgrade" ]
-    args.phpversion = "8.0"
-
-[81_test]
-
-    only = ["install.subdir", "backup_restore", "upgrade" ]
-    args.phpversion = "8.1"
-
-
-[82_test]
-
-    only = ["install.subdir", "backup_restore", "upgrade" ]
-    args.phpversion = "8.2"
+    args.phpversion = "8.4"
