@@ -5,7 +5,7 @@ name = "Phpinfo"
 description.en = "Simple phpinfo"
 description.fr = "Simple phpinfo"
 
-version = "1.0~ynh6"
+version = "1.0~ynh7"
 
 maintainers = []
 
@@ -14,17 +14,17 @@ license = "GPL-3.0-or-later"
 website = "https://www.php.net/manual/fr/function.phpinfo.php"
 
 [integration]
-yunohost = ">= 11.2"
+yunohost = ">= 12.0.9"
+helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
 
 ldap = false
-
 sso = false
 
-disk = "50M"
-ram.build = "50M"
-ram.runtime = "50M"
+disk = "80M"
+ram.build = "130M"
+ram.runtime = "40M"
 
 [install]
     [install.domain]
@@ -38,17 +38,18 @@ ram.runtime = "50M"
     type = "group"
     default = "visitors"
 
-    [install.phpversion]
+    [install.php_version]
     ask.en = "Choose the version of PHP to use."
     ask.fr = "Choisissez la version de PHP à utiliser."
     type = "select"
-    choices = ["7.4", "8.0", "8.1", "8.2", "8.3"]
-    default = "8.3"
+    choices = ["8.2", "8.3", "8.4"]
+    default = "8.4"
 
 [resources]
     [resources.system_user]
 
     [resources.install_dir]
+    group = "www-data:r-x"
 
     [resources.permissions]
     main.url = "/"
@@ -56,5 +57,5 @@ ram.runtime = "50M"
     [resources.apt]
     packages = "nginx" # Kind of "dummy" value to be sure to have a non-empty dep list
     packages_from_raw_bash = """
-        echo "php${phpversion}-fpm"
+        echo "php${php_version}-fpm"
     """
