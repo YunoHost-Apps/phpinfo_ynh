@@ -20,7 +20,6 @@ architectures = "all"
 multi_instance = true
 
 ldap = false
-
 sso = false
 
 disk = "50M"
@@ -44,7 +43,7 @@ ram.runtime = "50M"
     ask.fr = "Choisissez la version de PHP à utiliser."
     type = "select"
     choices = ["8.2", "8.3", "8.4"]
-    default = "8.3"
+    default = "8.4"
 
 [resources]
     [resources.system_user]
@@ -58,5 +57,5 @@ ram.runtime = "50M"
     [resources.apt]
     packages = "nginx" # Kind of "dummy" value to be sure to have a non-empty dep list
     packages_from_raw_bash = """
-        echo "php${phpversion}-fpm"
+        echo "php${php_version}-fpm"
     """

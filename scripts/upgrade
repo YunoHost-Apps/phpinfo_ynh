@@ -8,8 +8,8 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression "Upgrading source files..."
 
-mkdir -p $install_dir
-cp -f ../sources/index.php /$install_dir/.
+mkdir -p $install_dir --keep="index.php"
+#cp -f ../sources/index.php /$install_dir/.
 
 #=================================================
 # PHP-FPM CONFIGURATION
