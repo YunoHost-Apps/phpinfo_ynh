@@ -5,7 +5,7 @@ name = "Phpinfo"
 description.en = "Simple phpinfo"
 description.fr = "Simple phpinfo"
 
-version = "1.0~ynh7"
+version = "1.0~ynh8"
 
 maintainers = []
 
@@ -42,8 +42,8 @@ ram.runtime = "40M"
     ask.en = "Choose the version of PHP to use."
     ask.fr = "Choisissez la version de PHP à utiliser."
     type = "select"
-    choices = ["8.2", "8.3", "8.4"]
-    default = "8.4"
+    choices = ["8.2", "8.3", "8.4", "8.5"]
+    default = "8.5"
 
 [resources]
     [resources.system_user]
