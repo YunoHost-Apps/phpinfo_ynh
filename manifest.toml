@@ -14,7 +14,7 @@ license = "GPL-3.0-or-later"
 website = "https://www.php.net/manual/fr/function.phpinfo.php"
 
 [integration]
-yunohost = ">= 12.1.38"
+yunohost = ">= 12.1.40"
 helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
@@ -42,7 +42,7 @@ ram.runtime = "40M"
     ask.en = "Choose the version of PHP to use."
     ask.fr = "Choisissez la version de PHP à utiliser."
     type = "select"
-    choices = ["8.2", "8.3", "8.4", "8.5"]
+    choices = ["8.3", "8.4", "8.5"]
     default = "8.5"
 
 [resources]
